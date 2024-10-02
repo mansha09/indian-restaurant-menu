@@ -1,16 +1,27 @@
-// src/App.js
-import React from 'react';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Menu from "./menu";  // Import Menu component
+import Cart from "./Cart";  // Import Cart component
 
+const App = () => {
+  const [cartItems, setCartItems] = useState([]);
 
-import Menu from './menu'; // Fix the case of the file name to match the import statement//+
-// {"conversat     ionId":"19c36c01-3f94-406a-bdc5-158b7ae9eca1","source":"instruct"}
+  const handleAddToCart = (item) => {
+    setCartItems([...cartItems, item]);
+  };
 
-function App() {
+  const handleRemoveFromCart = (itemId) => {
+    setCartItems(cartItems.filter(item => item.id !== itemId));
+  };
+
   return (
-    <div className="App">
-      <Menu /> {/* Render the Menu component */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Menu onAddToCart={handleAddToCart} />} />
+        <Route path="/cart" element={<Cart cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

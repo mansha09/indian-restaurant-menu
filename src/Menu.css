@@ -1,18 +1,47 @@
-/* src/Menu.css */
-h2 {
-    color: #ff6347;
+.menu-container {
+    position: relative;
+  }
+  
+  .hamburger-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1050;
+  }
+  
+  .offcanvas {
+    width: 250px; /* Adjust the width of the side menu */
+  }
+  
+  .btn-block {
+    width: 80%;
   }
   
   .card {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
   }
   
-  .card-title {
-    font-weight: bold;
+  .card:hover {
+    transform: scale(1.05);
   }
   
-  .card-text {
-    color: #555;
+  .card-img-top {
+    border-bottom: 1px solid #ddd;
   }
+  
+  .badge {
+    margin-top: 10px;
+  }
+
+  .user-cart-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1050;
+  }
+  
+  .user-cart-btn {
+    margin-left: 10px; /* Space between buttons */
+  }
+  
   
