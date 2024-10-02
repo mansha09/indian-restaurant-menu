@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+
+
+import Menu from './menu'; // Fix the case of the file name to match the import statement//+
+// {"conversat     ionId":"19c36c01-3f94-406a-bdc5-158b7ae9eca1","source":"instruct"}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu /> {/* Render the Menu component */}
     </div>
   );
 }

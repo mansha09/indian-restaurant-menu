@@ -1,0 +1,18 @@
+/* src/Menu.css */
+h2 {
+    color: #ff6347;
+  }
+  
+  .card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-weight: bold;
+  }
+  
+  .card-text {
+    color: #555;
+  }
+  
